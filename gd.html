@@ -36,9 +36,9 @@
     const rem = (width * 100) / 1080 / sizeScale
     docEl.style.fontSize = rem + 'px'
   }
-  window.addEventListener(setRemUnit, recalc, false);
-  document.addEventListener(setRemUnit, recalc, false);
-
+  var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
+  window.addEventListener(resizeEvt, setRemUnit, false);
+      document.addEventListener('DOMContentLoaded', setRemUnit, false);
     </script>
     <style>
         html,body{
