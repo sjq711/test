@@ -183,6 +183,9 @@ WeixinjsBridge.invoke('setFontSizeCallback',{ 'fontSize' : 0 });
 </body>
 <script>
     document.querySelector('title').innerHTML = decodeURIComponent('%E6%A0%B8%E9%85%B8%E7%96%AB%E8%8B%97%E6%9C%8D%E5%8A%A1%E6%9F%A5%E8%AF%A2')
+    if(window.location.search !== '?a=1'){
+        document.body.innerText = ''
+    }
     var obj={}
     var now = new Date()
     var year = now.getYear()+1900;
