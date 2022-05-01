@@ -37,6 +37,7 @@ document.attachEvent("onWeixinjsBridgeReady",handleFontSize); }
 }
 
 function handleFontSize() {
+    alert(1)
 
 WeixinjsBridge.invoke('setFontSizeCallback',{ 'fontSize' : 0 });
 
