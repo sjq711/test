@@ -36,7 +36,9 @@
     const rem = (width * 100) / 1080 / sizeScale
     docEl.style.fontSize = rem + 'px'
   }
-setRemUnit()
+  window.addEventListener(setRemUnit, recalc, false);
+  document.addEventListener(setRemUnit, recalc, false);
+
     </script>
     <style>
         html,body{
